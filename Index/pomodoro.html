@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Pomodoro.css">
+    <link rel="stylesheet" href="js/pomodoro.js">
+    <title>Pomodoro | StudiousMind</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">StudiousMind</a></h1>
+        <button class="botao">Login</button>
+        <button class="botao">Sign up</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="cursos.html">Courses</a></li>
+                <li><a href="sobre.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-pomodoro">
+        <h2>Pomodoro timer</h2>
+        <p class="intro">Study in focused blocks of 25 minutes, with short breaks in between.</p>
+
+        <div class="timer">
+            <!-- Os 3 modos. O JavaScript lê o data-modo para saber qual foi clicado. -->
+            <div class="timer-modos" role="group" aria-label="Timer mode">
+                <button type="button" class="modo" data-modo="foco" aria-pressed="true">Focus</button>
+                <button type="button" class="modo" data-modo="pausa" aria-pressed="false">Short break</button>
+                <button type="button" class="modo" data-modo="longa" aria-pressed="false">Long break</button>
+            </div>
+
+            <p id="tempo" class="timer-tempo" role="timer">25:00</p>
+
+            <div class="timer-controles">
+                <button type="button" id="btn-iniciar" class="btn-principal">Start</button>
+                <button type="button" id="btn-reiniciar" class="btn-secundario">Reset</button>
+            </div>
+
+            <!-- role="status" faz leitores de tela anunciarem as mensagens -->
+            <p id="aviso" class="timer-aviso" role="status"></p>
+            <p class="timer-sessoes">Focus sessions completed: <strong id="sessoes">0</strong></p>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/joannasantoss">Find me on LinkedIn</a>
+    </footer>
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>
